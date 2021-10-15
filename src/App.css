@@ -1,38 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("./Helpers/background.jpg");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 0 0 50px 0;
+    color: #fff;
+    border-bottom: 8px solid #ff7043;
+    border-top: 8px solid #ff7043;
+    border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu, .quiz, .endScreen {
+    width: 500px;
+    min-height: 500px;
+    background-color: #ff7043;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 8px 8px rgba(0, 0, 0, 0.3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.endScreen {
+    justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.result {
+    font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+    -webkit-appearance: none;
+    width: 280px;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 9px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    box-shadow: inset 100px 100px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.buttonClicked {
+    background-color: #0047b3 !important;
+    color: #fff;
+}
+
+.options > button {
+    font-size: 1.3rem;
+}
+
+.mainQuestion {
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 35px 0;
 }
